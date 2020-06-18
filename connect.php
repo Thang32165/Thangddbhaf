@@ -1,5 +1,6 @@
 <?php
-$conn_string="host=ec2-52-20-248-222.compute-1.amazonaws.com port=5432 dbname=dempdn7uu57aq9 user=xrqyopedfidgdw password=7873024f9ea8478508064813fe5c4ea4a7dd48932abaf99a4174c86162d6b4d8";
+$conn_string="host=ec2-3-222-30-53.compute-1.amazonaws.com port=5432 dbname=d58ub5269mefdn user=wrntyqrssfpsii
+password=eec3f59ce96bd0946cac5e6aac5e9e99281b293354fc374ce501f1e376b16587";
 $dbconn= pg_connect($conn_string);
 if (isset($_POST['username'])) {
 	# code...
@@ -10,7 +11,7 @@ if (isset($_POST['pass'])) {
 	# code...
 	$pass = $_POST['pass'];
 }
-$sql = "SELECT * FROM Account1 WHERE _user='".$username."' AND _pass='".$pass."'";
+$sql = "SELECT * FROM Account WHERE _user='".$username."' AND _pass='".$pass."'";
 $result =pg_query($dbconn, $sql);
 $row = pg_num_rows($result);
 if ($row==1)
